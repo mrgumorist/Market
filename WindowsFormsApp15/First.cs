@@ -16,5 +16,11 @@ namespace WindowsFormsApp15
         {
             InitializeComponent();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Допомога" + Environment.NewLine + "Для входу як продавець тисніть Розпочати сесію" + Environment.NewLine + "Для входу як менеджер тисніть Керувати продуктами" + Environment.NewLine + "Для входу в адмін панель тисніть третю кнопку");
+
+        }
     }
 }
