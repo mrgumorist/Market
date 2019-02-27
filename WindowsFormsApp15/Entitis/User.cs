@@ -16,6 +16,8 @@ namespace WindowsFormsApp15.Entitis
         [Required]
         public string Name { get; set; }
         public string Surname { get; set; }
+        public string Login { get; set; }
+        public string Password { get; set; }
         public int TypeOfAccount { get; set; } //1 - Продавець, 2 - Менеджер , 3 - Адмін
         public DateTime LastLogin { get; set; }
     }
