@@ -19,9 +19,44 @@ namespace WindowsFormsApp15
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        async private void button1_Click(object sender, EventArgs e)
         {
+            bool finded = false;
+            Entitis.Context a = new Entitis.Context();
+            foreach (var item in a.users)
+            {
+                if (item.Login == textBox1.Text&& item.Password==textBox2.Text &&num==item.TypeOfAccount)
+                {
+                    MessageBox.Show("Вдалий вхід");
+                    finded = true;
+                    break;
+                }
+            }
+            if(finded!=true)
+            {
+                MessageBox.Show("Аккаунт не найдений! Спробуйте знову!");
+            }
+            else
+            {
+               
+                if (num == 1)
+                {
 
+                }
+                else if (num == 2)
+                {
+
+                }
+                else
+                if (num==3)
+                {
+                    Hide();
+                    AdminPanel admin = new AdminPanel();
+                    admin.ShowDialog();
+                    Close();
+                }
+            }
+            a.SaveChanges();
         }
     }
 }
