@@ -64,5 +64,16 @@ namespace WindowsFormsApp15
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = context.users.ToList();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int id=((List<Entitis.User>)dataGridView1.DataSource)[dataGridView1.CurrentCell.RowIndex].ID;
+            var user = ((List<Entitis.User>)dataGridView1.DataSource)[dataGridView1.CurrentCell.RowIndex];
+            context.users.Remove(user);
+            MessageBox.Show("Вдале видалення!");
+            context.SaveChanges();
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = context.users.ToList();
+        }
     }
 }
