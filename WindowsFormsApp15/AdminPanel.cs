@@ -57,7 +57,12 @@ namespace WindowsFormsApp15
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            Hide();
+            AddUser user = new AddUser();
+            user.ShowDialog();
+            this.Show();
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = context.users.ToList();
         }
     }
 }

@@ -16,5 +16,25 @@ namespace WindowsFormsApp15
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if(textBox1.Text!="" && textBox2.Text != "" && textBox3.Text != "" && textBox6.Text != "" && textBox5.Text != "" && comboBox1.Text != "")
+            {
+                foreach (var item in )
+                {
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Error");
+            }
+        }
     }
 }
