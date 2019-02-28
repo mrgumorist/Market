@@ -8,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Controls;
+using WindowsFormsApp15.Entitis;
 
 namespace WindowsFormsApp15
 {
     public partial class AdminPanel : Form
     {
+        Entitis.Context context = new Entitis.Context();
         public AdminPanel()
         {
             InitializeComponent();
@@ -26,15 +29,35 @@ namespace WindowsFormsApp15
         private void button2_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = null;
-            Entitis.Context context = new Entitis.Context();
             dataGridView1.DataSource = context.users.ToList();
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Entitis.Context context = new Entitis.Context();
-            MessageBox.Show(context.users.Count().ToString());
+            context.SaveChanges();
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = context.users.ToList();
+        }
+
+        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            var element = ((List<Entitis.User>)dataGridView1.DataSource)[e.RowIndex];
+            int id=int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+            User user = context.users.FirstOrDefault(t => t.ID == id);
+            user.Login = element.Login;
+            user.Password = element.Password;
+            user.Name = element.Name;
+            user.Surname = element.Surname;
+            user.TypeOfAccount = element.TypeOfAccount;
+            user.LastLogin = element.LastLogin;
+
+            //dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
