@@ -24,5 +24,10 @@ namespace WindowsFormsApp15
             edit.ShowDialog();
             Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

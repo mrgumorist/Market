@@ -70,5 +70,17 @@ namespace WindowsFormsApp15
             }
             
         }
+
+        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            var element = ((List<Entitis.Products>)dataGridView1.DataSource)[e.RowIndex];
+            int id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+            Entitis.Products product = context.products.FirstOrDefault(t => t.ID == id);
+            product.Descriprion = element.Descriprion;
+            product.Name = element.Name;
+            product.SpecialCode = element.SpecialCode;
+            product.WeightOrVolume = element.WeightOrVolume;
+
+        }
     }
 }
