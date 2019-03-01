@@ -85,6 +85,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManagerPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerPanel.Designer.cs">
+      <DependentUpon>ManagerPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201902271422392_InitialCreate1.cs" />
     <Compile Include="Migrations\201902271422392_InitialCreate1.Designer.cs">
       <DependentUpon>201902271422392_InitialCreate1.cs</DependentUpon>
@@ -92,6 +98,10 @@
     <Compile Include="Migrations\201902271723447_InitialCreate11.cs" />
     <Compile Include="Migrations\201902271723447_InitialCreate11.Designer.cs">
       <DependentUpon>201902271723447_InitialCreate11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903011724026_name.cs" />
+    <Compile Include="Migrations\201903011724026_name.Designer.cs">
+      <DependentUpon>201903011724026_name.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -108,11 +118,17 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManagerPanel.resx">
+      <DependentUpon>ManagerPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902271422392_InitialCreate1.resx">
       <DependentUpon>201902271422392_InitialCreate1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902271723447_InitialCreate11.resx">
       <DependentUpon>201902271723447_InitialCreate11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903011724026_name.resx">
+      <DependentUpon>201903011724026_name.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
