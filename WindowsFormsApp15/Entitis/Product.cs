@@ -18,7 +18,8 @@ namespace WindowsFormsApp15.Entitis
         public virtual Products Productt { get; set; }
         public virtual ICollection<ProductsHistory> IProducts { get; set; }
         public int Count { get; set; }
-        public int PriceByOne { get; set; }
+        public double PriceByOne { get; set; }
         public int MarkUp { get; set; }
+        public double LastPrice { get; set; } 
     }
 }

@@ -115,6 +115,10 @@
     <Compile Include="Migrations\201903011724026_name.Designer.cs">
       <DependentUpon>201903011724026_name.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903031042205_t.cs" />
+    <Compile Include="Migrations\201903031042205_t.Designer.cs">
+      <DependentUpon>201903031042205_t.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProductsEdit.cs">
       <SubType>Form</SubType>
@@ -153,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903011724026_name.resx">
       <DependentUpon>201903011724026_name.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903031042205_t.resx">
+      <DependentUpon>201903031042205_t.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductsEdit.resx">
       <DependentUpon>ProductsEdit.cs</DependentUpon>
