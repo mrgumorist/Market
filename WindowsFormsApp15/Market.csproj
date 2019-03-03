@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddOnSclad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOnSclad.Designer.cs">
+      <DependentUpon>AddOnSclad.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddOnSclad.resx">
+      <DependentUpon>AddOnSclad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddProduct.resx">
       <DependentUpon>AddProduct.cs</DependentUpon>
     </EmbeddedResource>
