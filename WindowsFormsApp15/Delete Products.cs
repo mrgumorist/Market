@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,16 @@ namespace WindowsFormsApp15
 
         private void Delete_Products_Load(object sender, EventArgs e)
         {
+            Entitis.Context context = new Entitis.Context();
+            dataGridView1.DataSource= context.product.ToList();
+           
 
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+ 
         }
     }
 }

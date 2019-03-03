@@ -18,6 +18,7 @@ namespace WindowsFormsApp15.Entitis
         public DbSet<Products> products { get; set; }
         public DbSet<ProductsHistory> prodHistory { get; set; }
         public DbSet<User> users { get; set; }
+        public DbSet<View1> views { get; set; }
     }
 }
 

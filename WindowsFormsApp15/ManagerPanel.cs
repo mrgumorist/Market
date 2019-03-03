@@ -35,7 +35,10 @@ namespace WindowsFormsApp15
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            Hide();
+            Delete_Products delete = new Delete_Products();
+            delete.ShowDialog();
+            Show();
         }
     }
 }
