@@ -80,6 +80,12 @@
     <Compile Include="AdminPanel.Designer.cs">
       <DependentUpon>AdminPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Delete Products.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete Products.Designer.cs">
+      <DependentUpon>Delete Products.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entitis\Context.cs" />
     <Compile Include="Entitis\Product.cs" />
     <Compile Include="Entitis\Products.cs" />
@@ -139,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminPanel.resx">
       <DependentUpon>AdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete Products.resx">
+      <DependentUpon>Delete Products.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="First.resx">
       <DependentUpon>First.cs</DependentUpon>
