@@ -17,6 +17,6 @@ namespace WindowsFormsApp15.Entitis
         public int ProductID { get; set; }
         public virtual Product Productt { get; set; }
         public DateTime dateTransaction { get; set; }
-        public string Type { get; set; } //1-Додано 2-Продано 3-Списано
+        public int Type { get; set; } //1-Додано 2-Продано 3-Списано
     }
 }
