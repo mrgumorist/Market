@@ -40,5 +40,29 @@ namespace WindowsFormsApp15
             delete.ShowDialog();
             Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Hide();
+            History avaliable = new History();
+            avaliable.ShowDialog();
+            Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Hide();
+            AvaliableProducts avaliable = new AvaliableProducts();
+            avaliable.ShowDialog();
+            Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Report avaliable = new Report();
+            avaliable.ShowDialog();
+            Show();
+        }
     }
 }

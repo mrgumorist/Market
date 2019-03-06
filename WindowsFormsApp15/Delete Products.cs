@@ -150,26 +150,6 @@ namespace WindowsFormsApp15
                 Delete_Products_Load(sender, e);
             }
 
-            //int id = ((List<Entitis.Product>)dataGridView1.DataSource)[dataGridView1.CurrentCell.RowIndex].ID;
-            //var prod = ((List<Entitis.Product>)dataGridView1.DataSource)[dataGridView1.CurrentCell.RowIndex];
-            //DialogResult dialogResult = MessageBox.Show("Ви точно бажаєте видалити?", "Ви точно бажаєте видалити?", MessageBoxButtons.YesNo);
-            //if (dialogResult == DialogResult.Yes)
-            //{
-            //    context.product.Remove(prod);
-            //    MessageBox.Show("Вдале видалення!");
-            //    var tmp = new Entitis.ProductsHistory();
-            //    tmp.dateTransaction = DateTime.Now;
-            //    tmp.Type = 3;
-            //    tmp.Productt = prod;
-            //    context.SaveChanges();
-            //    dataGridView1.DataSource = null;
-            //    dataGridView1.DataSource = context.product.ToList();
-
-            //}
-            //else if (dialogResult == DialogResult.No)
-            //{
-            //    MessageBox.Show("Видалення відмінено!");
-            //}
         }
     }
 }
