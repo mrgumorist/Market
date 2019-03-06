@@ -79,6 +79,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Зробити звіт";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Report
             // 
@@ -92,6 +93,7 @@
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
             this.Name = "Report";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Report";
             this.ResumeLayout(false);
             this.PerformLayout();

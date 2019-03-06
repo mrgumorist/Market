@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp15
 {
-    public partial class Report : Form
+    public partial class Репорт : Form
     {
-        public Report()
+        public Репорт()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Hide();
-            Репорт report = new Репорт();
-            report.ShowDialog();
-            report.Close();
         }
     }
 }
