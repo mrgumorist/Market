@@ -62,6 +62,7 @@ namespace WindowsFormsApp15
             {
                 if (ID != -1)
                 {
+                  
                     product.ProductID = ID;
                     product.Count = int.Parse(textBox1.Text);
                     product.PriceByOne = double.Parse(textBox2.Text);
@@ -71,9 +72,18 @@ namespace WindowsFormsApp15
                     product.LastPrice = temp;
                     Entitis.Context context = new Entitis.Context();
                     context.product.Add(product);
+                    Entitis.ProductsHistory history = new Entitis.ProductsHistory();
+                    history.dateTransaction = DateTime.Now;
+                    history.ProductID = ID;
+                    history.Type = 1;
+                    context.prodHistory.Add(history);
                     context.SaveChanges();
                     MessageBox.Show("Успішно доданий");
                     textBox1.ReadOnly = true;
+                    textBox1.Text = "";
+                    textBox2.Text = "";
+                    textBox3.Text = "";
+                    textBox4.Text = "";
                     textBox2.ReadOnly = true;
                     textBox3.ReadOnly = true;
 
@@ -87,6 +97,39 @@ namespace WindowsFormsApp15
             {
                 MessageBox.Show("Поля не можуть бути пустими");
             }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            Changed();
+        }
+        private void Changed()
+        {
+            try
+            {
+
+           
+            Entitis.Product product = new Entitis.Product();
+            product.Count = int.Parse(textBox1.Text);
+            product.PriceByOne = double.Parse(textBox2.Text);
+            product.MarkUp = int.Parse(textBox3.Text);
+            double temp1 = product.PriceByOne + (product.PriceByOne / 100 * product.MarkUp);
+            textBox4.Text = temp1.ToString();
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            Changed();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            Changed();
         }
     }
 }

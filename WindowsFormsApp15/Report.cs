@@ -20,7 +20,7 @@ namespace WindowsFormsApp15
         private void button1_Click(object sender, EventArgs e)
         {
             Hide();
-            Репорт report = new Репорт();
+            Репорт report = new Репорт(dateTimePicker1.Value, dateTimePicker2.Value);
             report.ShowDialog();
             report.Close();
         }
