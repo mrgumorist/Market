@@ -93,10 +93,61 @@ namespace WindowsFormsApp15
                 int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
 
                 DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
-
-                string a = Convert.ToString(selectedRow.Cells[0].Value);
+                int id = int.Parse(selectedRow.Cells[0].Value.ToString());
+                int Count = int.Parse(selectedRow.Cells[4].Value.ToString());
+                
+                    int count = int.Parse(textBox3.Text);
+                    if(count>0)
+                    {
+                        if(Count>count)
+                        {
+                            foreach (var item in context.product)
+                            {
+                                if(item.ID==id)
+                                {
+                                    item.Count -= count;
+                                    MessageBox.Show("Готово");
+                                    Entitis.ProductsHistory history = new Entitis.ProductsHistory();
+                                    history.dateTransaction = DateTime.Now;
+                                    history.ProductID = id;
+                                    history.Type = 3;
+                                    context.prodHistory.Add(history);
+                                  
+                                    break;
+                                }
+                            }
+                        }
+                        else if(count==Count)
+                        {
+                            foreach (var item in context.product)
+                            {
+                                if (item.ID == id)
+                                {
+                                    item.Count -= count;
+                                    MessageBox.Show("Готово");
+                                    Entitis.ProductsHistory history = new Entitis.ProductsHistory();
+                                    history.dateTransaction = DateTime.Now;
+                                    history.ProductID = id;
+                                    history.Type = 3;
+                                    context.prodHistory.Add(history);
+                                    context.product.Remove(item);
+                                   
+                                    break;
+                                }
+                                
+                                
+                            }
+                        }
+                        else
+                         {
+                        MessageBox.Show("Помилка", "ErrorProvider");
+                        textBox3.Text = "";
+                         }
+                    context.SaveChanges();
+                    }
+                   
               
-
+                Delete_Products_Load(sender, e);
             }
 
             //int id = ((List<Entitis.Product>)dataGridView1.DataSource)[dataGridView1.CurrentCell.RowIndex].ID;
