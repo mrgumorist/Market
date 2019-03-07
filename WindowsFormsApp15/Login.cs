@@ -31,6 +31,7 @@ namespace WindowsFormsApp15
                 {
                     MessageBox.Show("Вдалий вхід");
                     finded = true;
+                    item.LastLogin = DateTime.Now;
                     break;
                 }
             }
@@ -44,7 +45,9 @@ namespace WindowsFormsApp15
                 Hide();
                 if (num == 1)
                 {
-
+                    Продавець продавець = new Продавець();
+                    продавець.ShowDialog();
+                    Close();
                 }
                 else if (num == 2)
                 {
