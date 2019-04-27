@@ -93,7 +93,6 @@
     <Compile Include="Entitis\Products.cs" />
     <Compile Include="Entitis\ProductsHistory.cs" />
     <Compile Include="Entitis\User.cs" />
-    <Compile Include="Entitis\View1.cs" />
     <Compile Include="First.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,7 +198,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Photos\Market.jpg" />
